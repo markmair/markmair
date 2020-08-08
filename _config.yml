@@ -20,7 +20,7 @@ authors:
     yeogai:
       name:           yeogai
       site:           https://markmair.github.io
-      avatar:         /assets/images/avatar1.jpg
+      avatar:         assets/images/avatar1.jpg
       bio:            "Hi!"
       email:          yeog.choy@gmail.com
  
@@ -33,7 +33,7 @@ defaults:
     values:
       layout: post
       author: yeogai
-      avatar: /assets/images/avatar1.jpg
+      avatar: assets/images/avatar1.jpg
       
   # all pages
   - scope:
