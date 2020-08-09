@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="font-weight-bold title h6 mb-4">
+                {% if page.type == 'category' %}
+                Category: {{ page.title }} 
+                {% elsif page.type == 'tag' %}
+                Tag: {{ page.title }} 
+                {{ page.date | date: '%Y' }}
+                {% elsif page.type == 'year' %}
+                {{ page.date | date: '%Y' }}
+                {% elsif page.type == 'month' %}
+                {{ page.date | date: '%Y %B' }}
+                {% elsif page.type == 'day' %}
+                {{ page.date | date: '%F' }}
+                {% endif %}
+            </h1>
+
+            {% assign pages_list = page.posts %}
+            {% for post in pages_list %}
+            {% if post.title != null %}
+            {% if group == null or group == post.group %}
+
+            {% include main-loop-card.html %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% assign pages_list = nil %}
+            {% assign group = nil %}
+
+        </div>
+    </div>
+</div>
