@@ -4,6 +4,7 @@ description: 'A Website.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.png'
 baseurl: ''
+url: 'https://markmair.github.io'
 email: 'yeog.choy@gmail.com'
 
 include: ["_pages"]
